@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "../components/site/Reveal";
+import { LuxuryVideo } from "../components/site/LuxuryVideo";
 import exteriorDay from "../assets/exterior-day.jpg";
 import garden from "../assets/garden.jpg";
 import terrace from "../assets/terrace-view.jpg";
 import loungeView from "../assets/lounge-view.jpg";
+import interiorVideo from "../assets/hotel interior.mp4";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
