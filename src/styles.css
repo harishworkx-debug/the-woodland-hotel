@@ -179,6 +179,11 @@
 @utility animate-fadeUp { animation: fadeUp .9s cubic-bezier(.2,.7,.2,1) both; }
 @utility animate-kenburns { animation: kenburns 12s ease-out infinite alternate; }
 @utility animate-float { animation: float-y 4s ease-in-out infinite; }
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+@utility animate-slow-zoom { animation: slow-zoom 18s ease-in-out infinite alternate; }
 
 /* Scroll reveal helper (CSS-only via IntersectionObserver in components) */
 @utility reveal {

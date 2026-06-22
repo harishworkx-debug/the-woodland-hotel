@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
 import {
   Wifi, Car, UtensilsCrossed, Users, BellRing, Mountain,
   Sparkles, Flame, Zap, ConciergeBell, Trees, Stethoscope,
   Star, ArrowRight, MapPin, Calendar,
 } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import { LuxuryVideo } from "../components/site/LuxuryVideo";
 
 import exteriorDay from "../assets/exterior-day.jpg";
 import exteriorNight from "../assets/exterior-night.jpg";
@@ -16,6 +16,9 @@ import garden from "../assets/garden.jpg";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import dining from "../assets/dining.jpg";
+
+import heroVideo from "../assets/first banner video.mp4";
+import outsideViewVideo from "../assets/outside view hotel.mp4";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,43 +35,29 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const heroSlides = [
-  { img: exteriorDay, title: "The Woodland Kandaghat", sub: "Experience Peace, Comfort & Scenic Himalayan Views" },
-  { img: terrace, title: "Where Pines Meet Comfort", sub: "Valley-view terraces, fresh mountain air" },
-  { img: exteriorNight, title: "Evenings That Glow", sub: "A warm boutique stay on NH-5 Kandaghat" },
-];
-
 function HomePage() {
-  const [slide, setSlide] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 6000);
-    return () => clearInterval(t);
-  }, []);
-
   return (
     <>
-      {/* HERO SLIDER */}
+      {/* HERO VIDEO */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        {heroSlides.map((s, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-[1400ms] ${i === slide ? "opacity-100" : "opacity-0"}`}
-          >
-            <img src={s.img} alt={s.title} className={`h-full w-full object-cover ${i === slide ? "animate-kenburns" : ""}`} />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
-          </div>
-        ))}
+        <div className="absolute inset-0">
+          <LuxuryVideo src={heroVideo} poster={exteriorDay} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/80" />
+          {/* floating gradient blobs */}
+          <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[color:var(--gold)]/20 blur-3xl animate-float" />
+          <div className="absolute bottom-0 -right-24 h-[28rem] w-[28rem] rounded-full bg-[color:var(--forest)]/40 blur-3xl" />
+        </div>
 
         <div className="relative z-10 h-full container-luxe flex flex-col justify-center text-white">
           <div className="max-w-3xl">
-            <span className="eyebrow !text-[color:var(--gold)]">Himachal Pradesh · NH-5</span>
-            <h1 key={slide} className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] animate-fadeUp">
-              {heroSlides[slide].title}
+            <span className="eyebrow !text-[color:var(--gold)] animate-fadeUp">Himachal Pradesh · NH-5</span>
+            <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] animate-fadeUp" style={{ animationDelay: "120ms" }}>
+              The Woodland Kandaghat
             </h1>
-            <p key={`s${slide}`} className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl animate-fadeUp" style={{ animationDelay: "150ms" }}>
-              {heroSlides[slide].sub}
+            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl animate-fadeUp" style={{ animationDelay: "260ms" }}>
+              Experience Peace, Comfort &amp; Scenic Himalayan Views
             </p>
-            <div className="mt-9 flex flex-wrap gap-4 animate-fadeUp" style={{ animationDelay: "300ms" }}>
+            <div className="mt-9 flex flex-wrap gap-4 animate-fadeUp" style={{ animationDelay: "420ms" }}>
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-4 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
                 Book Your Stay
               </Link>
@@ -76,18 +65,6 @@ function HomePage() {
                 Explore Rooms
               </Link>
             </div>
-          </div>
-
-          {/* slider dots */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setSlide(i)}
-                className={`h-1.5 rounded-full transition-all ${i === slide ? "w-10 bg-[color:var(--gold)]" : "w-5 bg-white/40"}`}
-                aria-label={`Slide ${i + 1}`}
-              />
-            ))}
           </div>
         </div>
 
@@ -119,6 +96,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* WELCOME */}
       <section className="section-y bg-[color:var(--beige)]">
@@ -205,20 +183,25 @@ function HomePage() {
         </div>
       </section>
 
-      {/* PARALLAX EXPERIENCE */}
-      <section
-        className="relative h-[60vh] min-h-[440px] bg-fixed bg-cover bg-center"
-        style={{ backgroundImage: `url(${terrace})` }}
-      >
-        <div className="absolute inset-0 bg-[color:var(--forest)]/70" />
+      {/* SCENIC PARALLAX VIDEO */}
+      <section className="relative h-[90vh] min-h-[560px] w-full overflow-hidden">
+        <div className="absolute inset-0">
+          <LuxuryVideo src={outsideViewVideo} poster={terrace} />
+          <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--forest)]/55 via-black/40 to-[color:var(--forest)]/80" />
+        </div>
         <div className="relative h-full container-luxe flex items-center justify-center text-center text-white">
           <Reveal>
             <span className="eyebrow !text-[color:var(--gold)]">A Luxury Experience</span>
-            <h2 className="mt-5 font-display text-4xl sm:text-6xl max-w-3xl">Mornings of mist. Evenings of golden pine light.</h2>
-            <p className="mt-6 max-w-xl mx-auto text-white/80">Curated experiences from sunrise tea on the deck to candle-lit family dinners overlooking the valley.</p>
+            <h2 className="mt-5 font-display text-5xl sm:text-7xl max-w-4xl leading-[1.05]">
+              Wake Up To <span className="text-gradient-gold">Himalayan Views</span>
+            </h2>
+            <p className="mt-6 max-w-xl mx-auto text-white/85 text-lg">
+              Mornings of mist, evenings of golden pine light — your private mountain sanctuary.
+            </p>
           </Reveal>
         </div>
       </section>
+
 
       {/* AMENITIES */}
       <section className="section-y bg-[color:var(--beige)]">

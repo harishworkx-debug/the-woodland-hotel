@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "../components/site/Reveal";
+import { LuxuryVideo } from "../components/site/LuxuryVideo";
 import exteriorDay from "../assets/exterior-day.jpg";
 import garden from "../assets/garden.jpg";
 import terrace from "../assets/terrace-view.jpg";
 import loungeView from "../assets/lounge-view.jpg";
+import interiorVideo from "../assets/hotel interior.mp4";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -31,8 +33,13 @@ function AboutPage() {
 
       <section className="section-y">
         <div className="container-luxe grid lg:grid-cols-2 gap-14 items-center">
-          <Reveal className="rounded-3xl overflow-hidden shadow-luxe zoom-img aspect-[4/5]">
-            <img src={loungeView} alt="Hotel interior" className="h-full w-full object-cover" />
+          <Reveal className="relative rounded-3xl overflow-hidden shadow-luxe aspect-[4/5]">
+            <LuxuryVideo src={interiorVideo} poster={loungeView} />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-6 left-6 right-6 glass-card rounded-2xl px-5 py-3">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--forest)]/70">Inside The Woodland</div>
+              <div className="font-display text-lg text-[color:var(--forest)]">Crafted Interiors</div>
+            </div>
           </Reveal>
           <Reveal delay={120}>
             <span className="eyebrow">Our Story</span>

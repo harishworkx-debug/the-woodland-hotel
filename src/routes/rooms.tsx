@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/site/Reveal";
+import { LuxuryVideo } from "../components/site/LuxuryVideo";
 import { BedDouble, Bath, Wifi, Tv, Mountain, Sparkles, Flame, ArrowRight } from "lucide-react";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import loungeView from "../assets/lounge-view.jpg";
+import roomsVideo from "../assets/hotel rooms.mp4";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
@@ -44,15 +46,30 @@ const rooms = [
 function RoomsPage() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
-        <img src={loungeView} alt="Rooms" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
-        <div className="relative h-full container-luxe flex flex-col justify-end pb-16 text-white">
-          <span className="eyebrow !text-[color:var(--gold)]">Stay With Us</span>
-          <h1 className="mt-4 font-display text-5xl sm:text-6xl max-w-3xl">Rooms designed around the view</h1>
-          <p className="mt-4 max-w-xl text-white/85">Starting from ₹1,550 — ₹2,660 per night.</p>
+      <section className="relative h-[80vh] min-h-[520px] overflow-hidden">
+        <div className="absolute inset-0">
+          <LuxuryVideo src={roomsVideo} poster={loungeView} />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/80" />
+        </div>
+        <div className="relative h-full container-luxe flex flex-col justify-end pb-20 text-white">
+          <Reveal>
+            <span className="eyebrow !text-[color:var(--gold)]">Stay With Us</span>
+            <h1 className="mt-4 font-display text-5xl sm:text-7xl max-w-3xl leading-[1.05]">
+              Rooms designed around the <span className="text-gradient-gold">view</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-white/85 text-lg">Plush interiors, mountain balconies & quiet evenings. Starting from ₹1,550 / night.</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-3.5 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
+                Book Your Stay
+              </Link>
+              <a href="#rooms" className="glass-dark text-white font-semibold px-7 py-3.5 rounded-full hover:bg-white/15 transition">
+                Browse Rooms
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
+
 
       <section className="section-y">
         <div className="container-luxe space-y-16">
