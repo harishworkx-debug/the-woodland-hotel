@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
 import {
   Wifi, Car, UtensilsCrossed, Users, BellRing, Mountain,
   Sparkles, Flame, Zap, ConciergeBell, Trees, Stethoscope,
-  Star, ArrowRight, MapPin, Calendar,
+  Star, ArrowRight, Calendar,
 } from "lucide-react";
 import { Reveal } from "../components/site/Reveal";
+import { LuxuryVideo } from "../components/site/LuxuryVideo";
 
 import exteriorDay from "../assets/exterior-day.jpg";
 import exteriorNight from "../assets/exterior-night.jpg";
@@ -16,6 +16,9 @@ import garden from "../assets/garden.jpg";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import dining from "../assets/dining.jpg";
+
+import heroVideo from "../assets/first banner video.mp4";
+import outsideViewVideo from "../assets/outside view hotel.mp4";
 
 export const Route = createFileRoute("/")({
   head: () => ({
