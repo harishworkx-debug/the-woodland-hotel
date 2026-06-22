@@ -41,7 +41,7 @@ function HomePage() {
       {/* HERO VIDEO */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
         <div className="absolute inset-0">
-          <LuxuryVideo src={heroVideo} poster={exteriorDay} />
+          <LuxuryVideo src={heroVideo} poster={exteriorDay} zoom={false} fade={false} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/80" />
           {/* floating gradient blobs */}
           <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[color:var(--gold)]/20 blur-3xl animate-float" />
