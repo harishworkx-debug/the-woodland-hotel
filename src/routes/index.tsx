@@ -15,7 +15,26 @@ import loungeView from "../assets/lounge-view.jpg";
 import garden from "../assets/garden.jpg";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
+
+
+
 import dining from "../assets/dining.jpg";
+import interior from "../assets/interior.jpeg";
+import interior1 from "../assets/interior1.jpeg";
+import interior2 from "../assets/interior2.jpeg";
+
+import exterior4 from "../assets/exterior4.jpeg";
+import exterior5 from "../assets/exterior5.jpeg";
+import exterior6 from "../assets/exterior6.jpeg";
+import exterior7 from "../assets/exterior7.jpeg";
+import exterior8 from "../assets/exterior8.jpeg";
+import exterior9 from "../assets/exterior9.jpeg";
+import vipcars from "../assets/vip-cars.jpeg";
+import vipcars12 from "../assets/vip-cars2.jpeg";
+
+
+
+
 
 import heroVideo from "../assets/first banner video.mp4";
 import outsideViewVideo from "../assets/outside view hotel.mp4";
@@ -318,7 +337,7 @@ function HomePage() {
             </Link>
           </Reveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-            {[exteriorDay, terrace, room1, restaurantSunset, garden, dining, loungeView, exteriorNight].map((img, i) => (
+            {[exteriorDay, terrace, room1, restaurantSunset, dining, exteriorNight, exterior4, exterior5, exterior6, exterior7, exterior9, interior, interior1, interior2, vipcars, vipcars12].map((img, i) => (
               <Reveal key={i} delay={i * 60} className="rounded-2xl overflow-hidden shadow-luxe zoom-img aspect-square">
                 <img src={img} alt="Gallery" className="h-full w-full object-cover" />
               </Reveal>
