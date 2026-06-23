@@ -3,6 +3,28 @@ import { Reveal } from "../components/site/Reveal";
 import { MapPin, ArrowUpRight } from "lucide-react";
 import terrace from "../assets/terrace-view.jpg";
 
+import sadhupul from "../assets/Sadhupul.jpg"
+import chail from "../assets/Chail.jpg";
+import kutharFort from "../assets/kuthar fort.jpg";
+import karolTibbaTrek from "../assets/karol tibba trek.jpg";
+import mohanShaktiNationalHeritagePark from "../assets/Mohan Shakti National Heritage Park.jpg";
+import taraDeviTemple from "../assets/Tara Devi Temple.jpg";
+import theRidgeShimla from "../assets/The Ridge, Shimla.jpg";
+import jakhooTemple from "../assets/Jakhoo Temple.jpg";
+import indianInstituteOfAdvancedStudy from "../assets/indian Institute of Advanced Study.jpg";
+
+const heroImgs = [
+  sadhupul,
+  chail,
+  kutharFort,
+  karolTibbaTrek,
+  mohanShaktiNationalHeritagePark,
+  taraDeviTemple,
+  theRidgeShimla,
+  jakhooTemple,
+  indianInstituteOfAdvancedStudy,
+];
+
 export const Route = createFileRoute("/attractions")({
   head: () => ({
     meta: [
@@ -28,12 +50,6 @@ const places = [
   { t: "The Ridge, Shimla", d: "Iconic promenade in the heart of Shimla.", dist: "32 km" },
   { t: "Jakhoo Temple", d: "Lord Hanuman temple atop Jakhoo Hill.", dist: "34 km" },
   { t: "Indian Institute of Advanced Study", d: "Historic Viceregal Lodge in Shimla.", dist: "33 km" },
-  { t: "Venture Shimla Hills", d: "Adventure activities for the whole family.", dist: "25 km" },
-];
-
-const heroImgs = [
-  "https://images.unsplash.com/photo-1606117331085-5760e3b58520?w=1200",
-  "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200",
 ];
 
 function AttractionsPage() {
@@ -54,7 +70,12 @@ function AttractionsPage() {
             <Reveal key={p.t} delay={(i % 6) * 80}>
               <article className="group h-full rounded-3xl overflow-hidden shadow-luxe bg-white hover-lift">
                 <div className="zoom-img aspect-[4/3] relative">
-                  <img src={heroImgs[i % heroImgs.length]} alt={p.t} className="h-full w-full object-cover" loading="lazy" />
+                  <img
+  src={heroImgs[i % heroImgs.length]}
+  alt={p.t}
+  className="h-full w-full object-cover"
+  loading="lazy"
+/>
                   <div className="absolute top-4 left-4 glass-card rounded-full px-3 py-1 text-xs font-medium text-[color:var(--forest)] flex items-center gap-1">
                     <MapPin className="h-3 w-3 text-[color:var(--gold)]" /> {p.dist}
                   </div>
