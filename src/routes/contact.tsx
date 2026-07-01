@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Reveal } from "../components/site/Reveal";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import exteriorNight from "../assets/exterior-night.jpg";
+import exteriorNight from "../assets/outside00.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

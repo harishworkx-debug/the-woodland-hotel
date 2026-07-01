@@ -13,6 +13,8 @@ import theRidgeShimla from "@/assets/Theridge.jpg"
 import jakhooTemple from "@/assets/Jakhoo Temple.jpg";
 import indianInstitute from "@/assets/IndianInstitute.jpg";
 
+import views from "@/assets/views.jpg";
+
 const heroImgs = [
   sadhupul,
   chail,
@@ -56,7 +58,7 @@ function AttractionsPage() {
   return (
     <>
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
-        <img src={terrace} alt="Nearby" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
+        <img src={views} alt="Nearby" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-14 text-white">
           <span className="eyebrow !text-[color:var(--gold)]">Nearby Attractions</span>

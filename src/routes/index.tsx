@@ -15,6 +15,7 @@ import loungeView from "../assets/lounge-view.jpg";
 import garden from "../assets/garden.jpg";
 import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
+import homer from "../assets/homr.jpeg";
 
 
 
@@ -379,7 +380,7 @@ function HomePage() {
       {/* CTA */}
       <section
         className="relative py-28 bg-cover bg-center"
-        style={{ backgroundImage: `url(${exteriorNight})` }}
+        style={{ backgroundImage: `url(${homer})` }}
       >
         <div className="absolute inset-0 bg-black/65" />
         <div className="relative container-luxe text-center text-white">

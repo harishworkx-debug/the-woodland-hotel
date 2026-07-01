@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Reveal } from "../components/site/Reveal";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import garden from "../assets/garden.jpg";
+import outside13 from "../assets/vip-cars.jpeg";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -38,7 +39,7 @@ function ReviewsPage() {
   return (
     <>
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
-        <img src={garden} alt="Reviews" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
+        <img src={outside13} alt="Reviews" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-14 text-white">
           <span className="eyebrow !text-[color:var(--gold)]">Guest Stories</span>

@@ -6,6 +6,7 @@ import garden from "../assets/garden.jpg";
 import terrace from "../assets/terrace-view.jpg";
 import loungeView from "../assets/lounge-view.jpg";
 import interiorVideo from "../assets/hotel interior.mp4";
+import homer from "../assets/homr.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -28,7 +29,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="A mountain story, written in pine and gold"
-        img={exteriorDay}
+        img={homer}
       />
 
       <section className="section-y">

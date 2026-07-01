@@ -4,6 +4,7 @@ import { UtensilsCrossed, Leaf, Users, ChefHat, Star } from "lucide-react";
 import dining from "../assets/dining.jpg";
 import restaurantSunset from "../assets/restaurant-sunset.jpg";
 import terrace from "../assets/terrace-view.jpg";
+import nightre from "../assets/nightres.jpeg";
 
 export const Route = createFileRoute("/restaurant")({
   head: () => ({

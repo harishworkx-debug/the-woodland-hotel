@@ -41,6 +41,7 @@ import outside11 from "../assets/outside11.jpg";
 import outside12 from "../assets/outside12.jpg";
 import outside13 from "../assets/outside13.jpg";
 import outside14 from "../assets/outside14.jpg";
+import nightres from "../assets/nightres.jpeg";
 
 
 import room3 from "../assets/room3.jpg";
@@ -199,7 +200,7 @@ const items = [
   { img: exterior7, c: "Garden" },
   { img: exterior8, c: "Garden" },
   { img: exterior9, c: "Garden" },
-  
+  { img: nightres, c: "Garden" },
 
   { img: interior, c: "Interior" },
   { img: interior1, c: "Interior" },
@@ -237,7 +238,7 @@ function GalleryPage() {
   return (
     <>
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
-        <img src={terrace} alt="Gallery" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
+        <img src={nightres} alt="Gallery" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-14 text-white">
           <span className="eyebrow !text-[color:var(--gold)]">Gallery</span>
