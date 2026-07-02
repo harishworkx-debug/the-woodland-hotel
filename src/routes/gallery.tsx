@@ -13,6 +13,14 @@ import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import dining from "../assets/dining.jpg";
 
+import garden33 from "../assets/garden33.jpg";
+import garden34 from "../assets/garden34.jpg";
+import garden35 from "../assets/garden35.jpg";
+import garden36 from "../assets/garden36.jpg";
+import garden37 from "../assets/garden37.jpg";
+import garden38 from "../assets/garden38.jpg";
+import garden39 from "../assets/garden39.jpg";
+
 import interior from "../assets/interior.jpeg";
 import interior1 from "../assets/interior1.jpeg";
 import interior2 from "../assets/interior2.jpeg";
@@ -201,6 +209,13 @@ const items = [
   { img: exterior8, c: "Garden" },
   { img: exterior9, c: "Garden" },
   { img: nightres, c: "Garden" },
+  { img: garden33, c: "Garden" },
+  { img: garden34, c: "Garden" },
+  { img: garden35, c: "Garden" },
+  { img: garden36, c: "Garden" },
+  { img: garden37, c: "Garden" },
+  { img: garden38, c: "Garden" },
+  { img: garden39, c: "Garden" },
 
   { img: interior, c: "Interior" },
   { img: interior1, c: "Interior" },
@@ -214,6 +229,7 @@ const items = [
   { img: restaurant10, c: "Interior" },
   { img: restaurant11, c: "Interior" },
   { img: restaurant12, c: "Interior" },
+
 
 
   { img: exterior, c: "Hotel Exterior" },

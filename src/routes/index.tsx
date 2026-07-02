@@ -33,8 +33,13 @@ import exterior9 from "../assets/exterior9.jpeg";
 import vipcars from "../assets/vip-cars.jpeg";
 import vipcars12 from "../assets/vip-cars2.jpeg";
 
-
-
+import garden33 from "../assets/garden33.jpg";
+import garden34 from "../assets/garden34.jpg";
+import garden35 from "../assets/garden35.jpg";
+import garden36 from "../assets/garden36.jpg";
+import garden37 from "../assets/garden37.jpg";
+import garden38 from "../assets/garden38.jpg";
+import garden39 from "../assets/garden39.jpg";
 
 
 import heroVideo from "../assets/first banner video.mp4";
@@ -338,7 +343,7 @@ function HomePage() {
             </Link>
           </Reveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-            {[exteriorDay, terrace, room1, restaurantSunset, dining, exteriorNight, exterior4, exterior5, exterior6, exterior7, exterior9, interior, interior1, interior2, vipcars, vipcars12].map((img, i) => (
+            {[exteriorDay, terrace, room1, restaurantSunset, dining, exteriorNight, exterior4, garden33, garden34, garden35, garden36, garden37, garden38, garden39, exterior5, exterior6, exterior7, exterior9, interior, interior1, interior2, vipcars, vipcars12].map((img, i) => (
               <Reveal key={i} delay={i * 60} className="rounded-2xl overflow-hidden shadow-luxe zoom-img aspect-square">
                 <img src={img} alt="Gallery" className="h-full w-full object-cover" />
               </Reveal>
