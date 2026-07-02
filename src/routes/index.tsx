@@ -343,7 +343,7 @@ function HomePage() {
             </Link>
           </Reveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-            {[exteriorDay, terrace, room1, restaurantSunset, dining, exteriorNight, exterior4, garden33, garden34, garden35, garden36, garden37, garden38, garden39, exterior5, exterior6, exterior7, exterior9, interior, interior1, interior2, vipcars, vipcars12].map((img, i) => (
+            {[exteriorDay, terrace, room1, restaurantSunset, dining, exteriorNight, exterior4, garden33, garden34, garden35, garden36, garden37, garden38, garden39, exterior5, exterior6, exterior7, interior, interior1, interior2, vipcars, vipcars12].map((img, i) => (
               <Reveal key={i} delay={i * 60} className="rounded-2xl overflow-hidden shadow-luxe zoom-img aspect-square">
                 <img src={img} alt="Gallery" className="h-full w-full object-cover" />
               </Reveal>
