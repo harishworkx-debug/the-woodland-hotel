@@ -64,9 +64,19 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-luxe py-5 text-xs text-white/55 flex flex-wrap justify-between gap-3">
-          <span>© {new Date().getFullYear()} The Woodland Kandaghat. All rights reserved.</span>
-          <span>Crafted in the Himalayas · NH-5 Kandaghat</span>
+        <div className="container-luxe py-5 text-xs text-white/55 flex flex-col items-center gap-2 text-center">
+          <div className="flex flex-wrap justify-center gap-3">
+            <span>© {new Date().getFullYear()} The Woodland Kandaghat. All rights reserved.</span>
+            <span>Crafted in the Himalayas · NH-5 Kandaghat</span>
+          </div>
+          <a
+            href="https://www.techhim.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[color:var(--gold)] hover:text-white transition-colors"
+          >
+            Powered by TechHim Solutions
+          </a>
         </div>
       </div>
     </footer>
