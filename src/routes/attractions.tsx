@@ -42,9 +42,6 @@ export const Route = createFileRoute("/attractions")({
   }),
   component: AttractionsPage,
 });
-  }),
-  component: AttractionsPage,
-});
 
 const places = [
   { t: "Sadhupul", d: "Riverside hangout with cafes built over flowing water.", dist: "18 km" },
