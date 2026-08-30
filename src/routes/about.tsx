@@ -11,12 +11,13 @@ import homer from "../assets/homr.jpeg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — The Woodland Kandaghat | Luxury Hotel in Himachal" },
-      { name: "description", content: "Discover the story behind The Woodland Kandaghat — a boutique Himalayan retreat built on warmth, craft and an unwavering love for the mountains." },
-      { property: "og:title", content: "About The Woodland Kandaghat" },
-      { property: "og:description", content: "Our story, our mission and why guests love staying with us." },
+      { title: "About — The Woodland Kandaghat | Luxury Hotel in Kandaghat, Himachal" },
+      { name: "description", content: "Discover The Woodland Kandaghat's story — a luxury resort in Kandaghat built on warmth, heritage & love for Himalayan hospitality. Family-friendly hotel near Shimla since 2012." },
+      { property: "og:title", content: "About The Woodland Kandaghat — Luxury Resort Kandaghat" },
+      { property: "og:description", content: "Our story, our mission and why guests love our mountain hotel in Kandaghat near Shimla." },
       { property: "og:url", content: "/about" },
       { property: "og:image", content: garden },
+      { name: "keywords", content: "Woodland Kandaghat history, family hotel Kandaghat, luxury resort near Shimla, Kandaghat hospitality, mountain hotel heritage, Himachal Pradesh resort" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -44,16 +45,12 @@ function AboutPage() {
           </Reveal>
           <Reveal delay={120}>
             <span className="eyebrow">Our Story</span>
-            <h2 className="mt-3 font-display text-4xl text-[color:var(--forest)]">From a quiet hillside to a celebrated retreat</h2>
+            <h2 className="mt-3 font-display text-4xl text-[color:var(--forest)]">From a quiet Kandaghat hillside to celebrated luxury resort</h2>
             <p className="mt-5 text-[color:var(--muted-foreground)] leading-relaxed">
-              The Woodland Kandaghat was born from a simple wish — to share the calm
-              of Himachal’s pines with travellers seeking something gentler. Today,
-              our boutique hotel on NH-5 welcomes families, couples and solo
-              wanderers from across India and beyond.
+              The Woodland Kandaghat was born from a simple wish — to create a luxury resort in Kandaghat that showcases the authentic beauty of Himachal Pradesh's mountains. Nestled on NH-5 between Shimla and Chail, our family hotel welcomes guests seeking genuine mountain hospitality. Today, families, couples and travelers from across India choose us for our scenic valley views, fine dining and warm service.
             </p>
             <p className="mt-4 text-[color:var(--muted-foreground)] leading-relaxed">
-              Every wooden beam, valley-view window and dish on our table reflects
-              a deep love for the region — and a quiet promise of comfort.
+              Every wooden beam, mountain-view window and dish on our table reflects our deep commitment to the Kandaghat region — and our promise to provide exceptional Himalayan hospitality.
             </p>
           </Reveal>
         </div>

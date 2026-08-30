@@ -9,12 +9,13 @@ import nightre from "../assets/nightres.jpeg";
 export const Route = createFileRoute("/restaurant")({
   head: () => ({
     meta: [
-      { title: "Restaurant — Fresh Indian Cuisine | The Woodland Kandaghat" },
-      { name: "description", content: "Vegetarian Indian specialties, family dining and a kids menu — at our scenic in-house restaurant in Kandaghat." },
-      { property: "og:title", content: "Restaurant — The Woodland Kandaghat" },
-      { property: "og:description", content: "Fresh, vegetarian Indian cuisine with valley views." },
+      { title: "Restaurant — Fine Indian Cuisine in Kandaghat | The Woodland Hotel" },
+      { name: "description", content: "Experience fresh vegetarian Indian specialties & multi-cuisine dining at our scenic in-house restaurant in Kandaghat. Family dining with mountain views near Shimla. Kids menu available." },
+      { property: "og:title", content: "Restaurant — Fine Indian Cuisine at The Woodland Kandaghat" },
+      { property: "og:description", content: "Fresh, vegetarian Indian cuisine with valley views. Family restaurant & terrace dining in Kandaghat hotel." },
       { property: "og:url", content: "/restaurant" },
       { property: "og:image", content: dining },
+      { name: "keywords", content: "restaurant in Kandaghat, Indian cuisine, vegetarian restaurant Kandaghat, fine dining Kandaghat, family restaurant Kandaghat, terrace dining, multi-cuisine restaurant near Shimla" },
     ],
     links: [{ rel: "canonical", href: "/restaurant" }],
   }),
@@ -28,8 +29,8 @@ function RestaurantPage() {
         <img src={dining} alt="Restaurant" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-16 text-white">
-          <span className="eyebrow !text-[color:var(--gold)]">Dine With Us</span>
-          <h1 className="mt-4 font-display text-5xl sm:text-6xl max-w-3xl">Mountain flavours, lovingly plated</h1>
+          <span className="eyebrow !text-[color:var(--gold)]">Dine at Our Kandaghat Restaurant</span>
+          <h1 className="mt-4 font-display text-5xl sm:text-6xl max-w-3xl">Mountain flavours, lovingly plated in Kandaghat</h1>
         </div>
       </section>
 

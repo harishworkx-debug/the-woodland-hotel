@@ -30,14 +30,18 @@ const heroImgs = [
 export const Route = createFileRoute("/attractions")({
   head: () => ({
     meta: [
-      { title: "Nearby Attractions — The Woodland Kandaghat" },
-      { name: "description", content: "Sadhupul, Chail, Kuthar Fort, Karol Tibba, Tara Devi, The Ridge Shimla and more — all within easy reach of our hotel." },
+      { title: "Nearby Attractions — Explore Places Near Kandaghat & Shimla" },
+      { name: "description", content: "Discover nearby attractions from The Woodland Kandaghat: Sadhupul, Chail, Shimla, Kufri, Kuthar Fort & more. Perfect for family trips &amp; adventure near our hotel on NH-5." },
       { property: "og:title", content: "Nearby Attractions — The Woodland Kandaghat" },
-      { property: "og:description", content: "Explore the best of Kandaghat, Chail and Shimla from our base on NH-5." },
+      { property: "og:description", content: "Explore the best places to visit near Kandaghat, Chail, Shimla &amp; Solan from our mountain hotel base." },
       { property: "og:url", content: "/attractions" },
       { property: "og:image", content: terrace },
+      { name: "keywords", content: "attractions near Kandaghat, places to visit near Shimla, Chail tourism, Kufri trek, Sadhupul, Shimla attractions, family trip Kandaghat" },
     ],
     links: [{ rel: "canonical", href: "/attractions" }],
+  }),
+  component: AttractionsPage,
+});
   }),
   component: AttractionsPage,
 });

@@ -8,12 +8,13 @@ import outside13 from "../assets/vip-cars.jpeg";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — The Woodland Kandaghat | Guest Experiences" },
-      { name: "description", content: "Read what families and travellers say about staying at The Woodland Kandaghat — food, staff and views, in their own words." },
+      { title: "Guest Reviews & Testimonials — The Woodland Kandaghat Hotel" },
+      { name: "description", content: "Read authentic reviews from families, couples & travelers who stayed at luxury hotel in Kandaghat. Discover why guests love our mountain resort near Shimla." },
       { property: "og:title", content: "Guest Reviews — The Woodland Kandaghat" },
-      { property: "og:description", content: "Authentic guest experiences from our boutique mountain hotel." },
+      { property: "og:description", content: "Authentic guest experiences and testimonials from families &amp; couples at our luxury mountain hotel." },
       { property: "og:url", content: "/reviews" },
       { property: "og:image", content: garden },
+      { name: "keywords", content: "guest reviews Kandaghat hotel, testimonials luxury resort, family hotel reviews, couple retreat reviews, Kandaghat hotel ratings, Shimla hotel reviews" },
     ],
     links: [{ rel: "canonical", href: "/reviews" }],
   }),

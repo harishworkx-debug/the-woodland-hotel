@@ -48,12 +48,13 @@ import outsideViewVideo from "../assets/outside view hotel.mp4";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Woodland Kandaghat — Luxury Mountain Hotel near Shimla" },
-      { name: "description", content: "Experience peace, comfort & scenic Himalayan views at The Woodland Kandaghat — a boutique hotel on NH-5 near Shimla, Chail and Sadhupul." },
-      { property: "og:title", content: "The Woodland Kandaghat — Luxury Mountain Hotel" },
-      { property: "og:description", content: "Boutique hotel on NH-5 Kandaghat with valley-view rooms and fresh Indian cuisine." },
+      { title: "The Woodland Kandaghat — Luxury Hotel in Kandaghat Near Shimla" },
+      { name: "description", content: "Best luxury resort in Kandaghat on NH-5. Experience scenic Himalayan views, family-friendly accommodation, fine dining & mountain hospitality near Shimla. Book your getaway." },
+      { property: "og:title", content: "Luxury Hotel in Kandaghat — The Woodland" },
+      { property: "og:description", content: "Luxury resort in Kandaghat with mountain views, family rooms & fine Indian cuisine. Perfect for couples getaway and weekend retreat near Shimla." },
       { property: "og:url", content: "/" },
       { property: "og:image", content: exteriorDay },
+      { name: "keywords", content: "hotel in Kandaghat, resort in Kandaghat, luxury hotel Kandaghat, best resort Kandaghat, hotel near Shimla, resort near Shimla, family hotel Kandaghat, couple resort Kandaghat, mountain view hotel, Himachal resort" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -75,12 +76,12 @@ function HomePage() {
 
         <div className="relative z-10 h-full container-luxe flex flex-col justify-center text-white">
           <div className="max-w-3xl">
-            <span className="eyebrow !text-[color:var(--gold)] animate-fadeUp">Himachal Pradesh · NH-5</span>
+            <span className="eyebrow !text-[color:var(--gold)] animate-fadeUp">Kandaghat, Himachal Pradesh · NH-5</span>
             <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] animate-fadeUp" style={{ animationDelay: "120ms" }}>
-              The Woodland Kandaghat
+              The Woodland Kandaghat — Luxury Resort &amp; Hotel
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl animate-fadeUp" style={{ animationDelay: "260ms" }}>
-              Experience Peace, Comfort &amp; Scenic Himalayan Views
+              Luxury family resort near Shimla with mountain views, fine dining &amp; mountain hospitality. Perfect for couples, families &amp; getaways.
             </p>
             <div className="mt-9 flex flex-wrap gap-4 animate-fadeUp" style={{ animationDelay: "420ms" }}>
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-4 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
@@ -127,14 +128,12 @@ function HomePage() {
       <section className="section-y bg-[color:var(--beige)]">
         <div className="container-luxe grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
-            <span className="eyebrow">Welcome</span>
+            <span className="eyebrow">Welcome to Kandaghat</span>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">
-              A boutique retreat tucked into the <span className="text-gradient-gold">Himalayan pines</span>
+              Luxury resort in Kandaghat — Perfect for <span className="text-gradient-gold">family stays &amp; romantic getaways</span>
             </h2>
             <p className="mt-6 text-[color:var(--muted-foreground)] leading-relaxed">
-              The Woodland Kandaghat is a refined mountain hotel on NH-5 between Shimla
-              and Chail. Wake to layered valley views, dine on fresh Indian cuisine,
-              and unwind in spaces designed around the rhythm of the hills.
+              The Woodland Kandaghat is a premier boutique mountain hotel on NH-5, ideally located near Shimla and Chail. Our luxury resort offers valley-view rooms, fine Indian cuisine, spa services &amp; adventure activities. Ideal for families, couples, honeymoons &amp; corporate retreats seeking authentic Himalayan hospitality.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               {[
@@ -172,14 +171,14 @@ function HomePage() {
         <div className="container-luxe">
           <Reveal className="text-center max-w-2xl mx-auto">
             <span className="eyebrow">Stay With Us</span>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Featured Rooms & Suites</h2>
-            <p className="mt-4 text-[color:var(--muted-foreground)]">Plush bedding, mountain-view balconies and quiet evenings — every room is built for restful escapes.</p>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Luxury Rooms with Mountain Views</h2>
+            <p className="mt-4 text-[color:var(--muted-foreground)]">Experience valley-view rooms, plush bedding and quiet evenings at our family hotel in Kandaghat. Spacious accommodations starting from ₹3,000/night with fine hospitality.</p>
           </Reveal>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {[
-              { img: room1, name: "Deluxe Room", price: "₹3,000", desc: "Double bed, panoramic valley view, smart TV, attached bath." },
-              { img: room2, name: "Super Deluxe Room", price: "₹4,000", desc: "Spacious layout, premium furnishings, jungle views, daily housekeeping." },
+              { img: room1, name: "Deluxe Room", price: "₹3,000", desc: "Luxury double bed with panoramic valley view from private balcony. Features smart TV, free WiFi, attached bath with hot water &amp; daily housekeeping." },
+              { img: room2, name: "Super Deluxe Room", price: "₹4,000", desc: "Spacious luxury accommodation with premium furnishings &amp; jungle views. Perfect for families &amp; couples seeking premium comfort near Shimla." },
             ].map((r, i) => (
               <Reveal key={r.name} delay={i * 120}>
                 <article className="group relative rounded-3xl overflow-hidden shadow-luxe hover-lift bg-white">
@@ -265,13 +264,13 @@ function HomePage() {
           </Reveal>
           <Reveal delay={150}>
             <span className="eyebrow">Why Choose Us</span>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Where every detail feels considered</h2>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Best luxury resort in Kandaghat for families &amp; couples</h2>
             <ul className="mt-8 space-y-5">
               {[
-                ["Prime NH-5 Location", "Easy reach from Shimla, Chail and Sadhupul."],
-                ["Valley & Jungle Views", "Floor-to-ceiling glass for unbroken panoramas."],
-                ["Family-First Hospitality", "Spacious rooms, kids menu and warm service."],
-                ["Fresh Indian Cuisine", "Vegetarian specialties from an experienced chef."],
+                ["Strategic Location", "Prime NH-5 location with easy access to Shimla (40km), Chail (15km) and adventure trails."],
+                ["Mountain Valley Views", "Every room features floor-to-ceiling glass balconies with unbroken Himalayan panoramas."],
+                ["Family &amp; Couple-Focused", "Spacious rooms, kids menu, romantic dining terraces &amp; warm personalized hospitality."],
+                ["Fine Indian Cuisine", "Fresh vegetarian &amp; non-veg specialties crafted by experienced chef with local ingredients."],
               ].map(([t, d]) => (
                 <li key={t} className="flex gap-4">
                   <span className="mt-1 h-9 w-9 grid place-items-center rounded-full gradient-gold text-[color:var(--forest)] font-display">✓</span>

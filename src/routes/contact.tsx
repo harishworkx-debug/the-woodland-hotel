@@ -7,12 +7,13 @@ import exteriorNight from "../assets/outside00.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — The Woodland Kandaghat | Book Your Stay" },
-      { name: "description", content: "Reach The Woodland Kandaghat at +91 94180 21100. Village Silhari, NH-5 Kalka Shimla Road, Kandaghat, Himachal Pradesh 173215." },
-      { property: "og:title", content: "Contact — The Woodland Kandaghat" },
-      { property: "og:description", content: "Call, WhatsApp or write to us to book your Himalayan stay." },
+      { title: "Contact & Book — The Woodland Kandaghat | Hotel in Kandaghat" },
+      { name: "description", content: "Contact The Woodland Kandaghat at +91 94180 21100. Address: NH-5 Kalka-Shimla Road, Kandaghat, Solan, HP 173215. Book your luxury stay today or send an inquiry." },
+      { property: "og:title", content: "Contact & Book — The Woodland Kandaghat" },
+      { property: "og:description", content: "Call, WhatsApp or write to book your luxury mountain stay in Kandaghat near Shimla." },
       { property: "og:url", content: "/contact" },
       { property: "og:image", content: exteriorNight },
+      { name: "keywords", content: "contact Kandaghat hotel, book hotel Kandaghat, Woodland hotel phone, Shimla road hotel contact, Kandaghat booking, NH-5 hotel reservation" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),

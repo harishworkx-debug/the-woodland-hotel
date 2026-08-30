@@ -110,12 +110,13 @@ import restaurant15 from "../assets/restaurant15.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — The Woodland Kandaghat" },
-      { name: "description", content: "Explore rooms, restaurant, gardens and scenic views from our boutique hotel in Kandaghat." },
+      { title: "Photo Gallery — Luxury Hotel & Resort in Kandaghat" },
+      { name: "description", content: "Explore photos of luxury rooms, restaurant, gardens and mountain views at The Woodland Kandaghat. See why families &amp; couples love our hotel near Shimla." },
       { property: "og:title", content: "Gallery — The Woodland Kandaghat" },
-      { property: "og:description", content: "Photos of rooms, dining and Himalayan views." },
+      { property: "og:description", content: "Photos of mountain view rooms, fine dining, gardens and scenic Himalayan views from our luxury resort in Kandaghat." },
       { property: "og:url", content: "/gallery" },
       { property: "og:image", content: terrace },
+      { name: "keywords", content: "Kandaghat hotel photos, luxury room pictures, restaurant photos, mountain view gallery, Himachal resort images, Kandaghat accommodation" },
     ],
     links: [{ rel: "canonical", href: "/gallery" }],
   }),

@@ -10,12 +10,13 @@ import roomsVideo from "../assets/hotel rooms.mp4";
 export const Route = createFileRoute("/rooms")({
   head: () => ({
     meta: [
-      { title: "Rooms & Suites — The Woodland Kandaghat" },
-      { name: "description", content: "Deluxe and Super Deluxe valley-view rooms at The Woodland Kandaghat. Starting from ₹3,000 per night — Smart TV, free WiFi, daily housekeeping." },
-      { property: "og:title", content: "Rooms & Suites — The Woodland Kandaghat" },
-      { property: "og:description", content: "Plush Deluxe and Super Deluxe rooms with valley and jungle views from ₹3,000 / night." },
+      { title: "Luxury Rooms & Suites in Kandaghat — Mountain View Rooms Near Shimla" },
+      { name: "description", content: "Luxury deluxe rooms with mountain views in Kandaghat hotel on NH-5. Valley-view rooms starting from ₹3,000/night. Smart TV, WiFi, daily housekeeping. Perfect for families & couples near Shimla." },
+      { property: "og:title", content: "Luxury Rooms with Valley Views — The Woodland Kandaghat" },
+      { property: "og:description", content: "Spacious deluxe & super deluxe rooms with panoramic mountain views. Premium accommodation near Shimla with fine hospitality." },
       { property: "og:url", content: "/rooms" },
       { property: "og:image", content: room1 },
+      { name: "keywords", content: "rooms in Kandaghat, mountain view rooms, deluxe rooms Kandaghat, luxury accommodation Kandaghat, hotel rooms near Shimla, family rooms Kandaghat, couple rooms, valley view rooms" },
     ],
     links: [{ rel: "canonical", href: "/rooms" }],
   }),
@@ -53,11 +54,11 @@ function RoomsPage() {
         </div>
         <div className="relative h-full container-luxe flex flex-col justify-end pb-20 text-white">
           <Reveal>
-            <span className="eyebrow !text-[color:var(--gold)]">Stay With Us</span>
+            <span className="eyebrow !text-[color:var(--gold)]">Stay in Kandaghat</span>
             <h1 className="mt-4 font-display text-5xl sm:text-7xl max-w-3xl leading-[1.05]">
-              Rooms designed around the <span className="text-gradient-gold">view</span>
+              Luxury rooms with <span className="text-gradient-gold">mountain views</span> near Shimla
             </h1>
-            <p className="mt-5 max-w-xl text-white/85 text-lg">Plush interiors, mountain balconies & quiet evenings. Starting from ₹3,000 / night.</p>
+            <p className="mt-5 max-w-xl text-white/85 text-lg">Premium accommodation in Kandaghat with valley views, plush bedding & exceptional hospitality. Ideal for families, couples &amp; getaways. Starting from ₹3,000/night.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-3.5 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
                 Book Your Stay
