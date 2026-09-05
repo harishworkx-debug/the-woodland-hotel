@@ -35,6 +35,13 @@ export function Footer() {
               ["/restaurant", "Restaurant"],
               ["/gallery", "Gallery"],
               ["/attractions", "Attractions"],
+              ["/nearby-attractions", "Places Near Kandaghat"],
+              ["/kandaghat", "Kandaghat Travel Guide"],
+              ["/hotel-in-kandaghat", "Plan Your Kandaghat Stay"],
+              ["/hotel-in-chail", "Hotel Near Chail"],
+              ["/hotel-near-sadhupul", "Hotel Near Sadhupul"],
+              ["/hotel-near-shimla", "Hotel Near Shimla"],
+              ["/hotel-in-solan", "Hotel Near Solan"],
               ["/reviews", "Reviews"],
             ].map(([to, label]) => (
               <li key={to}>

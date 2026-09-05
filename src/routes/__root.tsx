@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
 import { FloatingActions } from "../components/site/FloatingActions";
+import { HOTEL, SITE_URL, hotelSchema } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -60,14 +61,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Woodland Kandaghat — Luxury Hotel & Resort in Kandaghat, Himachal Pradesh" },
-      { name: "description", content: "Best luxury resort and hotel in Kandaghat, Himachal Pradesh on NH-5. Valley-view rooms, family accommodation, fine Indian cuisine. Book near Shimla now." },
+      { title: "Best Hotel in Kandaghat | The Woodland Kandaghat" },
+      { name: "description", content: "Looking for the best hotel in Kandaghat? Stay at The Woodland Kandaghat on NH 5 with comfortable rooms, scenic mountain views, dining, parking and family-friendly hospitality." },
       { name: "author", content: "The Woodland Kandaghat" },
-      { name: "keywords", content: "hotel in Kandaghat, resort in Kandaghat, luxury hotel Kandaghat, best resort Kandaghat, family hotel Kandaghat, hotel near Shimla, resort near Shimla, mountain view hotel, Himachal resort, Kandaghat accommodation, luxury stay" },
-      { property: "og:site_name", content: "The Woodland Kandaghat — Luxury Hotel" },
-      { property: "og:title", content: "The Woodland Kandaghat — Luxury Resort in Kandaghat" },
-      { property: "og:description", content: "Luxury mountain hotel with valley views, family rooms & fine dining. Ideal for couples, families & retreats. Book near Shimla on NH-5." },
+      { property: "og:site_name", content: HOTEL.name },
+      { property: "og:title", content: "Best Hotel in Kandaghat | The Woodland Kandaghat" },
+      { property: "og:description", content: "Comfortable rooms, mountain surroundings, dining and family-friendly hospitality on NH 5 in Kandaghat." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -82,44 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Resort",
-          "@id": "https://thewoodlandkandaghat.com",
-          name: "The Woodland Kandaghat",
-          alternateName: "Woodland Kandaghat Hotel",
-          description: "Luxury resort and boutique hotel in Kandaghat, Himachal Pradesh on NH-5. Features valley-view rooms, family accommodation, fine Indian restaurant, spa &amp; mountain hospitality. Ideal for families, couples &amp; retreats near Shimla.",
-          image: "https://thewoodlandkandaghat.com/og-image.jpg",
-          url: "https://thewoodlandkandaghat.com",
-          telephone: "+91-94180-21100",
-          email: "stay@woodlandkandaghat.com",
-          priceRange: "₹₹",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Village Silhari, NH-5 Kalka Shimla Road",
-            addressLocality: "Kandaghat",
-            addressRegion: "Himachal Pradesh",
-            postalCode: "173215",
-            addressCountry: "IN",
-          },
-          geo: {
-            "@type": "GeoCoordinates",
-            latitude: "30.9784",
-            longitude: "77.1113",
-          },
-          sameAs: [
-            "https://www.google.com/maps/place/The+Woodland+Kandaghat",
-          ],
-          amenityFeature: [
-            "Free WiFi", "Parking", "Restaurant", "Family Rooms", "Room Service",
-            "Scenic Mountain Views", "Housekeeping", "Hot Water", "Power Backup",
-            "Garden Area", "Spa Services", "Terrace Dining", "Adventure Activities",
-          ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n })),
-          award: "Best Family Hotel Kandaghat",
-          foundingDate: "2012",
-          numberOfRooms: 12,
-          petsAllowed: true,
-        }),
+        children: JSON.stringify(hotelSchema()),
       },
     ],
   }),

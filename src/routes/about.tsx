@@ -7,29 +7,21 @@ import terrace from "../assets/terrace-view.jpg";
 import loungeView from "../assets/lounge-view.jpg";
 import interiorVideo from "../assets/hotel interior.mp4";
 import homer from "../assets/homr.jpeg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — The Woodland Kandaghat | Luxury Hotel in Kandaghat, Himachal" },
-      { name: "description", content: "Discover The Woodland Kandaghat's story — a luxury resort in Kandaghat built on warmth, heritage & love for Himalayan hospitality. Family-friendly hotel near Shimla since 2012." },
-      { property: "og:title", content: "About The Woodland Kandaghat — Luxury Resort Kandaghat" },
-      { property: "og:description", content: "Our story, our mission and why guests love our mountain hotel in Kandaghat near Shimla." },
-      { property: "og:url", content: "/about" },
-      { property: "og:image", content: garden },
-      { name: "keywords", content: "Woodland Kandaghat history, family hotel Kandaghat, luxury resort near Shimla, Kandaghat hospitality, mountain hotel heritage, Himachal Pradesh resort" },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
+  head: () => pageHead({ title: "About The Woodland Kandaghat | Hotel in Kandaghat", description: "Learn about The Woodland Kandaghat, our mountain setting, warm hospitality, comfortable accommodation and dining on NH 5 in Himachal Pradesh.", path: "/about", image: garden, breadcrumbs: [{ name: "Home", path: "/" }, { name: "About", path: "/about" }] }),
   component: AboutPage,
 });
 
 function AboutPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About" }]} />
       <PageHero
         eyebrow="About Us"
-        title="A mountain story, written in pine and gold"
+        title="About The Woodland Kandaghat"
         img={homer}
       />
 

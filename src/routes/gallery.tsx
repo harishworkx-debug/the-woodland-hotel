@@ -106,20 +106,11 @@ import restaurant12 from "../assets/restaurant12.jpg";
 import restaurant13 from "../assets/restaurant13.jpg";
 import restaurant14 from "../assets/restaurant14.jpg";
 import restaurant15 from "../assets/restaurant15.jpg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Photo Gallery — Luxury Hotel & Resort in Kandaghat" },
-      { name: "description", content: "Explore photos of luxury rooms, restaurant, gardens and mountain views at The Woodland Kandaghat. See why families &amp; couples love our hotel near Shimla." },
-      { property: "og:title", content: "Gallery — The Woodland Kandaghat" },
-      { property: "og:description", content: "Photos of mountain view rooms, fine dining, gardens and scenic Himalayan views from our luxury resort in Kandaghat." },
-      { property: "og:url", content: "/gallery" },
-      { property: "og:image", content: terrace },
-      { name: "keywords", content: "Kandaghat hotel photos, luxury room pictures, restaurant photos, mountain view gallery, Himachal resort images, Kandaghat accommodation" },
-    ],
-    links: [{ rel: "canonical", href: "/gallery" }],
-  }),
+  head: () => pageHead({ title: "Gallery | The Woodland Kandaghat", description: "See the rooms, restaurant, gardens, hotel spaces and mountain surroundings at The Woodland Kandaghat.", path: "/gallery", image: terrace, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Gallery", path: "/gallery" }] }),
   component: GalleryPage,
 });
 
@@ -254,6 +245,7 @@ function GalleryPage() {
 
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Gallery" }]} />
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
         <img src={nightres} alt="Gallery" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />

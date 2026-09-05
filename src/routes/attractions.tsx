@@ -14,6 +14,8 @@ import jakhooTemple from "@/assets/Jakhoo Temple.jpg";
 import indianInstitute from "@/assets/IndianInstitute.jpg";
 
 import views from "@/assets/views.jpg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 const heroImgs = [
   sadhupul,
@@ -28,18 +30,7 @@ const heroImgs = [
 ];
 
 export const Route = createFileRoute("/attractions")({
-  head: () => ({
-    meta: [
-      { title: "Nearby Attractions — Explore Places Near Kandaghat & Shimla" },
-      { name: "description", content: "Discover nearby attractions from The Woodland Kandaghat: Sadhupul, Chail, Shimla, Kufri, Kuthar Fort & more. Perfect for family trips &amp; adventure near our hotel on NH-5." },
-      { property: "og:title", content: "Nearby Attractions — The Woodland Kandaghat" },
-      { property: "og:description", content: "Explore the best places to visit near Kandaghat, Chail, Shimla &amp; Solan from our mountain hotel base." },
-      { property: "og:url", content: "/attractions" },
-      { property: "og:image", content: terrace },
-      { name: "keywords", content: "attractions near Kandaghat, places to visit near Shimla, Chail tourism, Kufri trek, Sadhupul, Shimla attractions, family trip Kandaghat" },
-    ],
-    links: [{ rel: "canonical", href: "/attractions" }],
-  }),
+  head: () => pageHead({ title: "Places to Visit Near Kandaghat | The Woodland Kandaghat", description: "Explore Sadhupul, Chail, Shimla, Karol Tibba, Kuthar Fort and other attractions from The Woodland Kandaghat on NH 5.", path: "/attractions", image: terrace, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Attractions", path: "/attractions" }] }),
   component: AttractionsPage,
 });
 
@@ -58,6 +49,7 @@ const places = [
 function AttractionsPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Attractions" }]} />
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
         <img src={views} alt="Nearby" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />

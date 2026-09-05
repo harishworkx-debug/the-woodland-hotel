@@ -44,19 +44,14 @@ import garden39 from "../assets/garden39.jpg";
 
 import heroVideo from "../assets/first banner video.mp4";
 import outsideViewVideo from "../assets/outside view hotel.mp4";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "The Woodland Kandaghat — Luxury Hotel in Kandaghat Near Shimla" },
-      { name: "description", content: "Best luxury resort in Kandaghat on NH-5. Experience scenic Himalayan views, family-friendly accommodation, fine dining & mountain hospitality near Shimla. Book your getaway." },
-      { property: "og:title", content: "Luxury Hotel in Kandaghat — The Woodland" },
-      { property: "og:description", content: "Luxury resort in Kandaghat with mountain views, family rooms & fine Indian cuisine. Perfect for couples getaway and weekend retreat near Shimla." },
-      { property: "og:url", content: "/" },
-      { property: "og:image", content: exteriorDay },
-      { name: "keywords", content: "hotel in Kandaghat, resort in Kandaghat, luxury hotel Kandaghat, best resort Kandaghat, hotel near Shimla, resort near Shimla, family hotel Kandaghat, couple resort Kandaghat, mountain view hotel, Himachal resort" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
+  head: () => pageHead({
+    title: "Best Hotel in Kandaghat | The Woodland Kandaghat",
+    description: "Looking for the best hotel in Kandaghat? Stay at The Woodland Kandaghat on NH 5 with comfortable rooms, scenic mountain views, dining, parking and family-friendly hospitality.",
+    path: "/",
+    image: exteriorDay,
   }),
   component: HomePage,
 });
@@ -78,10 +73,13 @@ function HomePage() {
           <div className="max-w-3xl">
             <span className="eyebrow !text-[color:var(--gold)] animate-fadeUp">Kandaghat, Himachal Pradesh · NH-5</span>
             <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] animate-fadeUp" style={{ animationDelay: "120ms" }}>
-              The Woodland Kandaghat — Luxury Resort &amp; Hotel
+              The Woodland Kandaghat
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl animate-fadeUp" style={{ animationDelay: "260ms" }}>
-              Luxury family resort near Shimla with mountain views, fine dining &amp; mountain hospitality. Perfect for couples, families &amp; getaways.
+            <p className="mt-4 text-xl sm:text-2xl text-white/90 max-w-xl animate-fadeUp" style={{ animationDelay: "220ms" }}>
+              A Scenic Mountain Stay in Kandaghat, Himachal Pradesh
+            </p>
+            <p className="mt-4 text-lg text-white/80 max-w-xl animate-fadeUp" style={{ animationDelay: "300ms" }}>
+              Discover comfortable rooms, beautiful Himalayan surroundings, warm hospitality and convenient access to Shimla, Chail and Sadhupul.
             </p>
             <div className="mt-9 flex flex-wrap gap-4 animate-fadeUp" style={{ animationDelay: "420ms" }}>
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-4 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
@@ -130,16 +128,16 @@ function HomePage() {
           <Reveal>
             <span className="eyebrow">Welcome to Kandaghat</span>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">
-              Luxury resort in Kandaghat — Perfect for <span className="text-gradient-gold">family stays &amp; romantic getaways</span>
+              Best Hotel in Kandaghat for a Comfortable Mountain Stay
             </h2>
             <p className="mt-6 text-[color:var(--muted-foreground)] leading-relaxed">
-              The Woodland Kandaghat is a premier boutique mountain hotel on NH-5, ideally located near Shimla and Chail. Our luxury resort offers valley-view rooms, fine Indian cuisine, spa services &amp; adventure activities. Ideal for families, couples, honeymoons &amp; corporate retreats seeking authentic Himalayan hospitality.
+              The Woodland Kandaghat is a boutique mountain hotel and restaurant in Silhari on NH 5. Guests come for comfortable rooms, scenic surroundings, freshly prepared food and a relaxed base for journeys toward Shimla, Chail, Sadhupul and Solan. On-site parking and family-friendly spaces make the hotel convenient for both road trips and longer stays.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-6">
               {[
-                { n: "12+", l: "Years of Hospitality" },
-                { n: "10K+", l: "Happy Guests" },
-                { n: "4.7★", l: "Guest Rating" },
+                { n: "NH 5", l: "Road access" },
+                { n: "2", l: "Room categories" },
+                { n: "24×7", l: "Guest assistance" },
               ].map((s) => (
                 <div key={s.l}>
                   <div className="font-display text-3xl text-gradient-gold">{s.n}</div>
@@ -161,6 +159,30 @@ function HomePage() {
             </div>
             <div className="col-span-6 row-span-2 rounded-3xl overflow-hidden shadow-luxe zoom-img">
               <img src={restaurantSunset} alt="Restaurant sunset" className="h-full w-full object-cover" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* LOCATION RELEVANCE */}
+      <section className="section-y">
+        <div className="container-luxe grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal>
+            <span className="eyebrow">Location</span>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Stay in the Heart of Kandaghat&apos;s Mountain Landscape</h2>
+            <p className="mt-6 text-[color:var(--muted-foreground)] leading-relaxed">Located at Silhari, Kandaghat, on NH 5, The Woodland keeps you close to the Kalka-Shimla route while offering a scenic mountain environment. It is a useful base for travelers continuing toward Shimla, Chail, Sadhupul, Solan or Waknaghat, with Kandaghat Railway Station also serving the local area.</p>
+            <Link to="/kandaghat" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--forest)] hover:text-[color:var(--gold)]">Read the Kandaghat travel guide <ArrowRight className="h-4 w-4" /></Link>
+          </Reveal>
+          <Reveal delay={120} className="glass-card rounded-3xl p-8">
+            <h3 className="font-display text-3xl text-[color:var(--forest)]">Plan the stay around your route</h3>
+            <div className="mt-6 space-y-4 text-sm text-[color:var(--muted-foreground)]">
+              <p><strong className="text-[color:var(--forest)]">Rooms:</strong> Choose a comfortable room for a family break, road-trip stop or weekend in the hills.</p>
+              <p><strong className="text-[color:var(--forest)]">Dining:</strong> Enjoy convenient in-house meals instead of searching for food after a day of travel.</p>
+              <p><strong className="text-[color:var(--forest)]">Exploring:</strong> Use the hotel as a base for local attractions and nearby Shimla hill routes.</p>
+            </div>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/rooms" className="gradient-gold text-[color:var(--forest)] font-semibold px-5 py-2.5 rounded-full">Explore rooms</Link>
+              <Link to="/restaurant" className="border border-[color:var(--forest)] text-[color:var(--forest)] font-semibold px-5 py-2.5 rounded-full">Explore our restaurant</Link>
             </div>
           </Reveal>
         </div>
@@ -374,10 +396,34 @@ function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/attractions" className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--forest)] hover:text-[color:var(--gold)]">
-              See all attractions <ArrowRight className="h-4 w-4" />
+            <Link to="/nearby-attractions" className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--forest)] hover:text-[color:var(--gold)]">
+              Discover places to visit near Kandaghat <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-y">
+        <div className="container-luxe max-w-4xl">
+          <Reveal>
+            <span className="eyebrow">Before you arrive</span>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[color:var(--forest)]">Planning a stay in Kandaghat</h2>
+          </Reveal>
+          <div className="mt-8 divide-y divide-[color:var(--border)]">
+            {[
+              ["Where is The Woodland Kandaghat located?", "The hotel is at Silhari, NH 5, Kandaghat, Solan, Himachal Pradesh 173215, India."],
+              ["Is there parking at the hotel?", "On-site parking is available for hotel guests and visitors."],
+              ["Does The Woodland Kandaghat have a restaurant?", "Yes. The in-house restaurant serves freshly prepared food for hotel guests and travelers."],
+              ["How can I book or ask a question?", "Call +91 94180 21100, send an enquiry through the contact page or use WhatsApp."],
+            ].map(([question, answer]) => (
+              <details key={question} className="py-5">
+                <summary className="cursor-pointer list-none font-semibold text-[color:var(--forest)]">{question}</summary>
+                <p className="mt-3 text-sm leading-relaxed text-[color:var(--muted-foreground)]">{answer}</p>
+              </details>
+            ))}
+          </div>
+          <div className="mt-8 text-center"><Link to="/hotel-in-kandaghat" className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--forest)] hover:text-[color:var(--gold)]">Read the full Kandaghat hotel guide <ArrowRight className="h-4 w-4" /></Link></div>
         </div>
       </section>
 

@@ -3,20 +3,11 @@ import { useState } from "react";
 import { Reveal } from "../components/site/Reveal";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import exteriorNight from "../assets/outside00.jpg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact & Book — The Woodland Kandaghat | Hotel in Kandaghat" },
-      { name: "description", content: "Contact The Woodland Kandaghat at +91 94180 21100. Address: NH-5 Kalka-Shimla Road, Kandaghat, Solan, HP 173215. Book your luxury stay today or send an inquiry." },
-      { property: "og:title", content: "Contact & Book — The Woodland Kandaghat" },
-      { property: "og:description", content: "Call, WhatsApp or write to book your luxury mountain stay in Kandaghat near Shimla." },
-      { property: "og:url", content: "/contact" },
-      { property: "og:image", content: exteriorNight },
-      { name: "keywords", content: "contact Kandaghat hotel, book hotel Kandaghat, Woodland hotel phone, Shimla road hotel contact, Kandaghat booking, NH-5 hotel reservation" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
+  head: () => pageHead({ title: "Contact The Woodland Kandaghat | Hotel in Kandaghat", description: "Contact The Woodland Kandaghat at +91 94180 21100. Find the hotel at Silhari, NH 5, Kandaghat, Solan, Himachal Pradesh 173215, India.", path: "/contact", image: exteriorNight, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }] }),
   component: ContactPage,
 });
 
@@ -24,6 +15,7 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact" }]} />
       <section className="relative h-[50vh] min-h-[360px] overflow-hidden">
         <img src={exteriorNight} alt="Contact" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70" />

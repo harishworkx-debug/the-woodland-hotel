@@ -6,20 +6,11 @@ import room1 from "../assets/room1.jpg";
 import room2 from "../assets/room2.jpg";
 import loungeView from "../assets/lounge-view.jpg";
 import roomsVideo from "../assets/hotel rooms.mp4";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/rooms")({
-  head: () => ({
-    meta: [
-      { title: "Luxury Rooms & Suites in Kandaghat — Mountain View Rooms Near Shimla" },
-      { name: "description", content: "Luxury deluxe rooms with mountain views in Kandaghat hotel on NH-5. Valley-view rooms starting from ₹3,000/night. Smart TV, WiFi, daily housekeeping. Perfect for families & couples near Shimla." },
-      { property: "og:title", content: "Luxury Rooms with Valley Views — The Woodland Kandaghat" },
-      { property: "og:description", content: "Spacious deluxe & super deluxe rooms with panoramic mountain views. Premium accommodation near Shimla with fine hospitality." },
-      { property: "og:url", content: "/rooms" },
-      { property: "og:image", content: room1 },
-      { name: "keywords", content: "rooms in Kandaghat, mountain view rooms, deluxe rooms Kandaghat, luxury accommodation Kandaghat, hotel rooms near Shimla, family rooms Kandaghat, couple rooms, valley view rooms" },
-    ],
-    links: [{ rel: "canonical", href: "/rooms" }],
-  }),
+  head: () => pageHead({ title: "Rooms in Kandaghat | The Woodland Kandaghat", description: "Explore comfortable rooms at The Woodland Kandaghat with scenic surroundings, modern essentials, private bathrooms and a relaxing mountain stay.", path: "/rooms", image: room1, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Rooms", path: "/rooms" }] }),
   component: RoomsPage,
 });
 
@@ -47,6 +38,7 @@ const rooms = [
 function RoomsPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Rooms" }]} />
       <section className="relative h-[80vh] min-h-[520px] overflow-hidden">
         <div className="absolute inset-0">
           <LuxuryVideo src={roomsVideo} poster={loungeView} />
@@ -55,9 +47,7 @@ function RoomsPage() {
         <div className="relative h-full container-luxe flex flex-col justify-end pb-20 text-white">
           <Reveal>
             <span className="eyebrow !text-[color:var(--gold)]">Stay in Kandaghat</span>
-            <h1 className="mt-4 font-display text-5xl sm:text-7xl max-w-3xl leading-[1.05]">
-              Luxury rooms with <span className="text-gradient-gold">mountain views</span> near Shimla
-            </h1>
+            <h1 className="mt-4 font-display text-5xl sm:text-7xl max-w-3xl leading-[1.05]">Comfortable Rooms at The Woodland Kandaghat</h1>
             <p className="mt-5 max-w-xl text-white/85 text-lg">Premium accommodation in Kandaghat with valley views, plush bedding & exceptional hospitality. Ideal for families, couples &amp; getaways. Starting from ₹3,000/night.</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-3.5 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">

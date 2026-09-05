@@ -5,32 +5,24 @@ import dining from "../assets/dining.jpg";
 import restaurantSunset from "../assets/restaurant-sunset.jpg";
 import terrace from "../assets/terrace-view.jpg";
 import nightre from "../assets/nightres.jpeg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/restaurant")({
-  head: () => ({
-    meta: [
-      { title: "Restaurant — Fine Indian Cuisine in Kandaghat | The Woodland Hotel" },
-      { name: "description", content: "Experience fresh vegetarian Indian specialties & multi-cuisine dining at our scenic in-house restaurant in Kandaghat. Family dining with mountain views near Shimla. Kids menu available." },
-      { property: "og:title", content: "Restaurant — Fine Indian Cuisine at The Woodland Kandaghat" },
-      { property: "og:description", content: "Fresh, vegetarian Indian cuisine with valley views. Family restaurant & terrace dining in Kandaghat hotel." },
-      { property: "og:url", content: "/restaurant" },
-      { property: "og:image", content: dining },
-      { name: "keywords", content: "restaurant in Kandaghat, Indian cuisine, vegetarian restaurant Kandaghat, fine dining Kandaghat, family restaurant Kandaghat, terrace dining, multi-cuisine restaurant near Shimla" },
-    ],
-    links: [{ rel: "canonical", href: "/restaurant" }],
-  }),
+  head: () => pageHead({ title: "Restaurant in Kandaghat | The Woodland Kandaghat", description: "Enjoy freshly prepared food at The Woodland Kandaghat, including vegetarian and multi-cuisine dining for hotel guests and travelers near Shimla.", path: "/restaurant", image: dining, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Restaurant", path: "/restaurant" }] }),
   component: RestaurantPage,
 });
 
 function RestaurantPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Restaurant" }]} />
       <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
         <img src={dining} alt="Restaurant" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-16 text-white">
           <span className="eyebrow !text-[color:var(--gold)]">Dine at Our Kandaghat Restaurant</span>
-          <h1 className="mt-4 font-display text-5xl sm:text-6xl max-w-3xl">Mountain flavours, lovingly plated in Kandaghat</h1>
+          <h1 className="mt-4 font-display text-5xl sm:text-6xl max-w-3xl">Dining at The Woodland Kandaghat</h1>
         </div>
       </section>
 

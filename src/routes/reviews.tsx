@@ -4,20 +4,11 @@ import { Reveal } from "../components/site/Reveal";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import garden from "../assets/garden.jpg";
 import outside13 from "../assets/vip-cars.jpeg";
+import { Breadcrumbs } from "../components/site/Breadcrumbs";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/reviews")({
-  head: () => ({
-    meta: [
-      { title: "Guest Reviews & Testimonials — The Woodland Kandaghat Hotel" },
-      { name: "description", content: "Read authentic reviews from families, couples & travelers who stayed at luxury hotel in Kandaghat. Discover why guests love our mountain resort near Shimla." },
-      { property: "og:title", content: "Guest Reviews — The Woodland Kandaghat" },
-      { property: "og:description", content: "Authentic guest experiences and testimonials from families &amp; couples at our luxury mountain hotel." },
-      { property: "og:url", content: "/reviews" },
-      { property: "og:image", content: garden },
-      { name: "keywords", content: "guest reviews Kandaghat hotel, testimonials luxury resort, family hotel reviews, couple retreat reviews, Kandaghat hotel ratings, Shimla hotel reviews" },
-    ],
-    links: [{ rel: "canonical", href: "/reviews" }],
-  }),
+  head: () => pageHead({ title: "Guest Reviews | The Woodland Kandaghat", description: "Read guest experiences about rooms, dining, mountain views and hospitality at The Woodland Kandaghat.", path: "/reviews", image: garden, breadcrumbs: [{ name: "Home", path: "/" }, { name: "Reviews", path: "/reviews" }] }),
   component: ReviewsPage,
 });
 
@@ -39,6 +30,7 @@ function ReviewsPage() {
 
   return (
     <>
+      <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Reviews" }]} />
       <section className="relative h-[55vh] min-h-[380px] overflow-hidden">
         <img src={outside13} alt="Reviews" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/65" />
