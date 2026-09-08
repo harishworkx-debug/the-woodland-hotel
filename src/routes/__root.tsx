@@ -61,11 +61,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Best Hotel in Kandaghat | The Woodland Kandaghat" },
+      { title: "The Woodland Kandaghat | Best Hotel in Kandaghat, Himachal Pradesh" },
       { name: "description", content: "Looking for the best hotel in Kandaghat? Stay at The Woodland Kandaghat on NH 5 with comfortable rooms, scenic mountain views, dining, parking and family-friendly hospitality." },
       { name: "author", content: "The Woodland Kandaghat" },
       { property: "og:site_name", content: HOTEL.name },
-      { property: "og:title", content: "Best Hotel in Kandaghat | The Woodland Kandaghat" },
+      { property: "og:title", content: "The Woodland Kandaghat | Best Hotel in Kandaghat, Himachal Pradesh" },
       { property: "og:description", content: "Comfortable rooms, mountain surroundings, dining and family-friendly hospitality on NH 5 in Kandaghat." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },

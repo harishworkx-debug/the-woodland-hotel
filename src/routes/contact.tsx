@@ -29,7 +29,7 @@ function ContactPage() {
         <div className="container-luxe grid lg:grid-cols-5 gap-10">
           <Reveal className="lg:col-span-2 space-y-4">
             {[
-              { Icon: MapPin, t: "Address", d: "Village Silhari, NH-5 Kalka Shimla Road, Kandaghat, Himachal Pradesh 173215" },
+              { Icon: MapPin, t: "Address", d: "Silhari, NH 5, Kandaghat, Solan, Himachal Pradesh 173215, India" },
               { Icon: Phone, t: "Phone", d: "+91 94180 21100", href: "tel:+919418021100" },
               { Icon: Mail, t: "Email", d: "stay@woodlandkandaghat.com", href: "mailto:stay@woodlandkandaghat.com" },
               { Icon: Clock, t: "Reception", d: "Open 24×7 · Check-in 12:00 PM · Check-out 11:00 AM" },

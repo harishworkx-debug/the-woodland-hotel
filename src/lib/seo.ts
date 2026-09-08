@@ -4,6 +4,7 @@ export const HOTEL = {
   name: "The Woodland Kandaghat",
   phone: "+91 94180 21100",
   telephone: "+919418021100",
+  email: "stay@woodlandkandaghat.com",
   address: {
     streetAddress: "Silhari, NH 5",
     addressLocality: "Kandaghat",
@@ -80,6 +81,7 @@ export function hotelSchema() {
     name: HOTEL.name,
     url: SITE_URL,
     telephone: HOTEL.telephone,
+    email: HOTEL.email,
     address: {
       "@type": "PostalAddress",
       ...HOTEL.address,

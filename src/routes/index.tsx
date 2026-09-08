@@ -48,7 +48,7 @@ import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => pageHead({
-    title: "Best Hotel in Kandaghat | The Woodland Kandaghat",
+    title: "The Woodland Kandaghat | Best Hotel in Kandaghat, Himachal Pradesh",
     description: "Looking for the best hotel in Kandaghat? Stay at The Woodland Kandaghat on NH 5 with comfortable rooms, scenic mountain views, dining, parking and family-friendly hospitality.",
     path: "/",
     image: exteriorDay,
@@ -82,6 +82,9 @@ function HomePage() {
               Discover comfortable rooms, beautiful Himalayan surroundings, warm hospitality and convenient access to Shimla, Chail and Sadhupul.
             </p>
             <div className="mt-9 flex flex-wrap gap-4 animate-fadeUp" style={{ animationDelay: "420ms" }}>
+              <Link to="/best-hotel-in-kandaghat" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-4 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
+                Why stay in Kandaghat
+              </Link>
               <Link to="/contact" className="gradient-gold text-[color:var(--forest)] font-semibold px-7 py-4 rounded-full shadow-luxe hover:scale-[1.04] transition-transform">
                 Book Your Stay
               </Link>
@@ -145,6 +148,9 @@ function HomePage() {
                 </div>
               ))}
             </div>
+              <Link to="/best-hotel-in-kandaghat" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--forest)] hover:text-[color:var(--gold)]">
+                Read our Kandaghat stay guide <ArrowRight className="h-4 w-4" />
+              </Link>
           </Reveal>
 
           <Reveal delay={150} className="grid grid-cols-6 grid-rows-6 gap-4 h-[520px]">

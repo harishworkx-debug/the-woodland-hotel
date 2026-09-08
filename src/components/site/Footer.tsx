@@ -37,7 +37,7 @@ export function Footer() {
               ["/attractions", "Attractions"],
               ["/nearby-attractions", "Places Near Kandaghat"],
               ["/kandaghat", "Kandaghat Travel Guide"],
-              ["/hotel-in-kandaghat", "Plan Your Kandaghat Stay"],
+              ["/best-hotel-in-kandaghat", "Best Hotel in Kandaghat"],
               ["/hotel-in-chail", "Hotel Near Chail"],
               ["/hotel-near-sadhupul", "Hotel Near Sadhupul"],
               ["/hotel-near-shimla", "Hotel Near Shimla"],
@@ -54,7 +54,7 @@ export function Footer() {
         <div>
           <h4 className="text-[color:var(--gold)] text-sm tracking-[0.3em] uppercase mb-5">Contact</h4>
           <ul className="space-y-4 text-sm">
-            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-1 text-[color:var(--gold)] shrink-0" /> Village Silhari, NH-5 Kalka-Shimla Road, Kandaghat, Himachal Pradesh 173215</li>
+            <li className="flex gap-3"><MapPin className="h-4 w-4 mt-1 text-[color:var(--gold)] shrink-0" /> Silhari, NH 5, Kandaghat, Solan, Himachal Pradesh 173215, India</li>
             <li className="flex gap-3"><Phone className="h-4 w-4 mt-1 text-[color:var(--gold)]" /> <a href="tel:+919418021100">+91 94180 21100</a></li>
             <li className="flex gap-3"><Mail className="h-4 w-4 mt-1 text-[color:var(--gold)]" /> <a href="mailto:stay@woodlandkandaghat.com">stay@woodlandkandaghat.com</a></li>
           </ul>

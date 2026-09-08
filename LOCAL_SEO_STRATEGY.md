@@ -7,6 +7,45 @@
 **Google Maps Link:** https://maps.app.goo.gl/9efxhyss434ydV5FA  
 **Focus:** Hotel, Resort & Accommodation Searches
 
+## 0. Canonical Business Details
+
+Use these details exactly on the website, Google Business Profile, directories, social profiles and partner pages. Do not alternate between different business names, phone formats or shortened addresses.
+
+- **Business name:** The Woodland Kandaghat
+- **Address:** Silhari, NH 5, Kandaghat, Solan, Himachal Pradesh 173215, India
+- **Phone:** +91 94180 21100
+- **Email:** stay@woodlandkandaghat.com
+- **Website:** https://www.thewoodlandhotels.com/
+- **Primary landing page:** https://www.thewoodlandhotels.com/best-hotel-in-kandaghat
+- **Google Maps:** https://maps.app.goo.gl/9efxhyss434ydV5FA
+
+## 0.1 Google Business Profile Checklist
+
+1. Use `The Woodland Kandaghat` as the real-world business name; do not add keywords such as “Best Hotel” to the name field.
+2. Select the most accurate primary hotel category, then add only genuinely offered secondary categories.
+3. Keep the canonical address, phone, website and business hours aligned with the details above and the Contact page.
+4. Add original exterior, rooms, restaurant, parking, entrance and nearby-view photographs with descriptive filenames and captions.
+5. Publish useful updates about room availability, seasonal travel, dining and local route conditions without repeating keyword-heavy copy.
+6. Request reviews from real guests after their stay. Ask them to describe their actual experience; never script or incentivize keywords.
+7. Use the dedicated landing page as the GBP website URL and use the contact page for booking or enquiry actions.
+
+## 0.2 Local Citation and Backlink Plan
+
+Build genuine local relevance through complete profiles and useful collaborations, not bulk directory submissions or paid links. Prioritize:
+
+- Google Business Profile and Google Maps
+- Himachal Pradesh tourism and local hospitality directories
+- Solan and Kandaghat business directories
+- Chail and Shimla travel guides that accept first-hand accommodation recommendations
+- Local taxi, tour, wedding, event and activity partners who actually refer guests
+- Local news, travel publishers and hotel booking profiles with a real business relationship
+
+For every listing, use the canonical NAP above, link to the most relevant page, and record the live URL, submission date and verification status. Remove duplicate or inaccurate listings. The strongest local links should point to the useful guide at `/best-hotel-in-kandaghat`, while room, attraction and contact links should be used only where they match the referring page's intent.
+
+## 0.3 Internal Linking Route
+
+The intended visitor path is: **Home → Best Hotel in Kandaghat → Rooms → Attractions → Contact**. The homepage and footer link to the dedicated page; that page links to room details, attraction planning and the contact flow.
+
 ---
 
 ## 1. MAIN KEYWORDS

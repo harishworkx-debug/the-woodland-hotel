@@ -21,6 +21,7 @@ import { Route as HotelInKandaghatRouteImport } from './routes/hotel-in-kandagha
 import { Route as HotelInChailRouteImport } from './routes/hotel-in-chail'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BestHotelInKandaghatRouteImport } from './routes/best-hotel-in-kandaghat'
 import { Route as AttractionsRouteImport } from './routes/attractions'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -85,6 +86,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BestHotelInKandaghatRoute = BestHotelInKandaghatRouteImport.update({
+  id: '/best-hotel-in-kandaghat',
+  path: '/best-hotel-in-kandaghat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AttractionsRoute = AttractionsRouteImport.update({
   id: '/attractions',
   path: '/attractions',
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/best-hotel-in-kandaghat': typeof BestHotelInKandaghatRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/hotel-in-chail': typeof HotelInChailRoute
@@ -122,6 +129,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/best-hotel-in-kandaghat': typeof BestHotelInKandaghatRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/hotel-in-chail': typeof HotelInChailRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/attractions': typeof AttractionsRoute
+  '/best-hotel-in-kandaghat': typeof BestHotelInKandaghatRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/hotel-in-chail': typeof HotelInChailRoute
@@ -159,6 +168,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/attractions'
+    | '/best-hotel-in-kandaghat'
     | '/contact'
     | '/gallery'
     | '/hotel-in-chail'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/attractions'
+    | '/best-hotel-in-kandaghat'
     | '/contact'
     | '/gallery'
     | '/hotel-in-chail'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/attractions'
+    | '/best-hotel-in-kandaghat'
     | '/contact'
     | '/gallery'
     | '/hotel-in-chail'
@@ -211,6 +223,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AttractionsRoute: typeof AttractionsRoute
+  BestHotelInKandaghatRoute: typeof BestHotelInKandaghatRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   HotelInChailRoute: typeof HotelInChailRoute
@@ -311,6 +324,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/best-hotel-in-kandaghat': {
+      id: '/best-hotel-in-kandaghat'
+      path: '/best-hotel-in-kandaghat'
+      fullPath: '/best-hotel-in-kandaghat'
+      preLoaderRoute: typeof BestHotelInKandaghatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/attractions': {
       id: '/attractions'
       path: '/attractions'
@@ -339,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AttractionsRoute: AttractionsRoute,
+  BestHotelInKandaghatRoute: BestHotelInKandaghatRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   HotelInChailRoute: HotelInChailRoute,
