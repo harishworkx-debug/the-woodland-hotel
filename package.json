@@ -13,6 +13,7 @@
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types",
+    "postinstall": "npm run build",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
